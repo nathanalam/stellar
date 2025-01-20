@@ -1,0 +1,26 @@
+---
+import { NavBar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Moon Rock Technologies</title>
+	</head>
+	<body>
+		<NavBar client:load />
+		<div class="min-h-screen grid grid-cols-1 lg:grid-cols-12">
+			<div class="hidden lg:block lg:col-span-2"></div>
+			<main class="col-span-1 lg:col-span-8 px-4 sm:px-6 lg:px-8 p-4">
+				<slot />
+			</main>
+			<div class="hidden lg:block lg:col-span-2"></div>
+		</div>
+		<Footer client:load />
+	</body>
+</html>
